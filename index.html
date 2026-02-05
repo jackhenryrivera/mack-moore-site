@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mack Moore Shoes | Charleston, Illinois</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Mack Moore Shoes in Charleston, Illinois – family-owned shoe store specializing in proper fit, work boots, and everyday comfort footwear since 1926." />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.6;
+      color: #222;
+      background-color: #f7f5f2;
+    }
+    a { color: #b03a2e; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    img { max-width: 100%; display: block; }
+
+    header {
+      background: linear-gradient(135deg, #b03a2e, #6e2c00);
+      color: #fff;
+      padding: 1.2rem 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+    }
+    .brand {
+      font-weight: 700;
+      font-size: 1.4rem;
+      letter-spacing: 0.06em;
+    }
+    .tagline {
+      font-size: 0.9rem;
+      opacity: 0.9;
+    }
+    .nav-links {
+      display: flex;
+      gap: 1rem;
+      font-size: 0.95rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .nav-links a {
+      color: #ffe9e4;
+      font-weight: 500;
+    }
+    .nav-links .cta-nav {
+      padding: 0.45rem 1rem;
+      border-radius: 999px;
+      background: #f4d03f;
+      color: #6e2c00;
+      border: none;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
+    .hero {
+      padding: 2.8rem 1rem 2rem;
+    }
+    .hero-grid {
+      display: grid;
+      gap: 1.8rem;
+    }
+    @media (min-width: 768px) {
+      .hero-grid {
+        grid-template-columns: 1.5fr 1fr;
+        align-items: center;
+      }
+    }
+    .hero h1 {
+      font-size: 2.2rem;
+      margin-bottom: 0.6rem;
+      color: #6e2c00;
+    }
+    .hero p {
+      margin-bottom: 1rem;
+      color: #444;
+    }
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1.2rem;
+    }
+    .badge {
+      border-radius: 999px;
+      border: 1px solid #e0c1b5;
+      padding: 0.25rem 0.7rem;
+      font-size: 0.8rem;
+      background: #fff;
+      color: #6e2c00;
+    }
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      padding: 0.6rem 1.4rem;
+      border: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .btn-primary {
+      background: #b03a2e;
+      color: #fff;
+    }
+    .btn-secondary {
+      background: transparent;
+      border: 1px solid #b03a2e;
+      color: #b03a2e;
+    }
+    .hero-photo {
+      background: #fff;
+      border-radius: 1rem;
+      padding: 0.75rem;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.05);
+    }
+    .hero-photo-inner {
+      border-radius: 0.75rem;
+      background: linear-gradient(135deg, #f9f4ec, #fbeee0);
+      padding: 1.2rem;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .hero-photo h3 {
+      font-size: 1rem;
+      margin-bottom: 0.3rem;
+      color: #6e2c00;
+    }
+    .hero-photo p {
+      font-size: 0.9rem;
+      color: #555;
+      margin-bottom: 0.4rem;
+    }
+    .hero-photo ul {
+      font-size: 0.85rem;
+      padding-left: 1.1rem;
+      color: #555;
+    }
+
+    main {
+      padding: 2rem 1rem 3rem;
+    }
+    section {
+      margin-bottom: 2.5rem;
+    }
+    h2 {
+      font-size: 1.6rem;
+      margin-bottom: 0.5rem;
+      color: #6e2c00;
+    }
+    .lead {
+      margin-bottom: 1rem;
+      color: #555;
+    }
+
+    .grid {
+      display: grid;
+      gap: 1.5rem;
+    }
+    @media (min-width: 768px) {
+      .grid-2 { grid-template-columns: repeat(2, minmax(0,1fr)); }
+      .grid-3 { grid-template-columns: repeat(3, minmax(0,1fr)); }
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 0.75rem;
+      padding: 1.1rem 1.2rem;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+      border: 1px solid rgba(0,0,0,0.03);
+    }
+    .pill {
+      display: inline-block;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      background: #fbeee0;
+      color: #6e2c00;
+      padding: 0.16rem 0.65rem;
+      border-radius: 999px;
+      margin-bottom: 0.4rem;
+      font-weight: 600;
+    }
+    .card h3 {
+      font-size: 1.05rem;
+      margin-bottom: 0.3rem;
+      color: #6e2c00;
+    }
+    .card p {
+      font-size: 0.92rem;
+      color: #555;
+    }
+    .feature-list {
+      font-size: 0.92rem;
+      padding-left: 1.1rem;
+      color: #555;
+      margin-top: 0.4rem;
+    }
+
+    .hours-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.92rem;
+    }
+    .hours-table th,
+    .hours-table td {
+      padding: 0.35rem 0.2rem;
+    }
+    .hours-table tbody tr:nth-child(odd) {
+      background-color: #fdf7f0;
+    }
+
+    .highlight {
+      color: #27ae60;
+      font-weight: 600;
+    }
+
+    .reviews {
+      display: grid;
+      gap: 1rem;
+    }
+    .review {
+      padding: 0.9rem 1rem;
+      border-left: 4px solid #f4d03f;
+      background-color: #fff;
+      border-radius: 0.5rem;
+      font-size: 0.9rem;
+    }
+    .review-author {
+      font-weight: 600;
+      margin-top: 0.35rem;
+      font-size: 0.85rem;
+      color: #555;
+    }
+    .review-tag {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #999;
+      margin-bottom: 0.25rem;
+    }
+
+    .map-embed {
+      border-radius: 0.75rem;
+      overflow: hidden;
+      border: 1px solid rgba(0,0,0,0.06);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+      min-height: 250px;
+    }
+
+    footer {
+      padding: 1.5rem 1rem;
+      border-top: 1px solid rgba(0,0,0,0.06);
+      background-color: #fff;
+      font-size: 0.85rem;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div>
+        <div class="brand">Mack Moore Shoes</div>
+        <div class="tagline">Proper fit, real comfort – Charleston, Illinois</div>
+      </div>
+      <nav class="nav-links">
+        <a href="#about">About</a>
+        <a href="#services">Footwear</a>
+        <a href="#hours">Hours</a>
+        <a href="#visit">Visit</a>
+        <button class="cta-nav" onclick="window.location.href='tel:+12173453479'">Call the Store</button>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" id="about">
+    <div class="container hero-grid">
+      <div>
+        <h1>Family-Owned Shoe Store in Charleston, IL</h1>
+        <p>For generations, Mack Moore Shoes has focused on one thing: getting you into the right pair of shoes for your feet and your life.</p>
+
+        <div class="hero-badges">
+          <span class="badge">Custom fit & measuring</span>
+          <span class="badge">Work boots & safety footwear</span>
+          <span class="badge">Comfort & casual shoes</span>
+        </div>
+
+        <div class="hero-actions">
+          <button class="btn btn-primary" onclick="window.location.href='tel:+12173453479'">
+            Call for sizing help
+          </button>
+          <a href="#services" class="btn btn-secondary">
+            Explore footwear options
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-photo">
+        <div class="hero-photo-inner">
+          <div>
+            <h3>Why people shop here</h3>
+            <p>Instead of guessing online, customers come to Mack Moore for hands-on fitting, real advice, and long-lasting shoes that work as hard as they do.</p>
+          </div>
+          <ul>
+            <li>Help choosing proper work boots for your job</li>
+            <li>Sizing support for wide or hard-to-fit feet</li>
+            <li>Friendly, small-town service every visit</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main class="container">
+    <section id="services">
+      <h2>Footwear & Services</h2>
+      <p class="lead">From job sites to everyday wear, the focus is on fit, comfort, and durability – not just the brand name.</p>
+
+      <div class="grid grid-3">
+        <div class="card">
+          <span class="pill">Work & Safety</span>
+          <h3>Work Boots</h3>
+          <p>Choose from safety-toe, slip-resistant, and supportive work boots, with guidance on what matches your job and foot shape.</p>
+          <ul class="feature-list">
+            <li>Steel and composite toe options</li>
+            <li>Help with sizing and width</li>
+            <li>Built for long shifts on your feet</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <span class="pill">Everyday Comfort</span>
+          <h3>Casual & Comfort Shoes</h3>
+          <p>Comfortable shoes for work, errands, or walking, chosen with support and all-day wear in mind.</p>
+          <ul class="feature-list">
+            <li>Brands focused on comfort and support</li>
+            <li>Styles for men and women</li>
+            <li>Suggestions for foot pain or fatigue</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <span class="pill">Personal Service</span>
+          <h3>Fitting & Advice</h3>
+          <p>The difference is in the service: measuring, listening, and finding the pair that actually fits your feet and your work.</p>
+          <ul class="feature-list">
+            <li>One-on-one help choosing shoes</li>
+            <li>Adjustments and recommendations</li>
+            <li>Local, family-run shop atmosphere</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="hours">
+      <h2>Store Hours</h2>
+      <p class="lead">Stop in when you have a few minutes to be properly fitted – your feet will thank you later.</p>
+
+      <div class="grid grid-2">
+        <div class="card">
+          <span class="pill">Hours</span>
+          <table class="hours-table">
+            <tbody>
+              <tr><th>Monday</th><td>9:00 am – 6:00 pm</td></tr>
+              <tr><th>Tuesday</th><td>9:00 am – 6:00 pm</td></tr>
+              <tr><th>Wednesday</th><td>9:00 am – 6:00 pm</td></tr>
+              <tr><th>Thursday</th><td>9:00 am – 6:00 pm</td></tr>
+              <tr><th>Friday</th><td>9:00 am – 6:00 pm</td></tr>
+              <tr><th>Saturday</th><td>9:00 am – 4:00 pm</td></tr>
+              <tr><th>Sunday</th><td>12:00 pm – 4:00 pm</td></tr>
+            </tbody>
+          </table>
+          <p style="margin-top:0.5rem;font-size:0.85rem;">Hours may change on holidays; call ahead if you are driving in from out of town.</p>
+        </div>
+
+        <div class="card" id="visit">
+          <span class="pill">Visit</span>
+          <p><strong>Address:</strong><br>305 W Lincoln Ave, Charleston, IL 61920</p>
+          <p><strong>Phone:</strong><br><a href="tel:+12173453479">(217) 345-3479</a></p>
+          <p><strong>Parking:</strong><br>Convenient parking near the storefront along Lincoln Avenue.</p>
+          <p><strong>Good for:</strong><br>Tradespeople, local workers, students, and anyone who wants a proper shoe fitting.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>What Customers Appreciate</h2>
+      <p class="lead">People mention the same things again and again: fit, service, and fair pricing for a local, family-run shop.</p>
+
+      <div class="reviews">
+        <div class="review">
+          <div class="review-tag">From a work-boot customer</div>
+          <p>“Best service and help for finding proper fitting work boots. You can tell they care about getting you into the right pair, not just any pair.”</p>
+          <div class="review-author">– Local tradesperson</div>
+        </div>
+
+        <div class="review">
+          <div class="review-tag">From a repeat shopper</div>
+          <p>“I like shopping here because they actually measure my feet, listen to what I do for work, and then recommend shoes that last.”</p>
+          <div class="review-author">– Regular customer</div>
+        </div>
+
+        <div class="review">
+          <div class="review-tag">From someone new to town</div>
+          <p>“Instead of guessing online sizes, I stopped here and walked out with boots that fit right the first time. Worth the visit.”</p>
+          <div class="review-author">– New customer</div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Plan Your Visit</h2>
+      <p class="lead">Bring the boots or shoes that are bothering you and get real feedback on what might fit and feel better.</p>
+
+      <div class="grid grid-2">
+        <div class="card">
+          <span class="pill">Before You Come</span>
+          <ul class="feature-list">
+            <li>Think about where you spend most of your day (job site, office, walking campus)</li>
+            <li>Bring your current shoes so staff can see where they are wearing out</li>
+            <li>Give yourself a little time so you are not rushed trying on options</li>
+          </ul>
+        </div>
+        <div class="map-embed">
+          <iframe
+            width="100%"
+            height="100%"
+            style="border:0"
+            loading="lazy"
+            allowfullscreen
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=305+W+Lincoln+Ave+Charleston+IL+61920&output=embed">
+          </iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      Mack Moore Shoes • 305 W Lincoln Ave, Charleston, IL 61920 • (217) 345-3479 • Family-owned footwear and fitting in Charleston, Illinois.
+    </div>
+  </footer>
+</body>
+</html>
